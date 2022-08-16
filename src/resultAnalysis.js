@@ -1,5 +1,5 @@
-const data = require('./data')
-const { MONGO_URI } = data
+const dataString = require('./data')
+const { MONGO_URI } = dataString
 
 const mongoose = require('mongoose')
 
@@ -15,8 +15,8 @@ const compareAndSaveResults = dataObj => {
    try{
       const Articles = require('./models/Articles')
 
-      const newArticles = new Articles(dataObj)
-      return newArticles.save().catch(err => console.log(err))
+      const newArticles = Articles.create(dataObj.data)
+      return newArticles
 
    }catch(err) {
       console.error(err)

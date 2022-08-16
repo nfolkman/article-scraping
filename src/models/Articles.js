@@ -12,7 +12,7 @@ const articlesSchema = new Schema({
       type: String
    },
    date: {
-      type: Date
+      type: String
    }
 })
 

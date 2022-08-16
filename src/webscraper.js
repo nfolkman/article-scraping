@@ -39,7 +39,7 @@ const URL = require('./data')
          })
          dataObj = {data}
 
-         console.log(data)
+         console.log(dataObj)
          await browser.close()
          return dataObj
       }

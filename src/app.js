@@ -2,8 +2,8 @@
 // const dotenv = require('dotenv')
 // const connectDB = require('./config/db')
 // // const { default: mongoose } = require('mongoose')
-const data = require('./data')
-const {URL} = data
+const dataString = require('./data')
+const {URL} = dataString
 
 const webscraper = require('./webscraper')
 const compareAndSaveResults = require('./resultAnalysis')
