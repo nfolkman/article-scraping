@@ -15,7 +15,15 @@ const compareAndSaveResults = dataObj => {
    try{
       const Articles = require('./models/Articles')
 
+
+      /*** Able to create documents in MongoDB fine, but unable to update/replace documents in database with the newly scraped data ***/
+      
       const newArticles = Articles.create(dataObj.data)
+      // const updateArticles = Articles.updateMany({},dataObj.data)
+
+      // if(!dataObj) return newArticles
+      // else return updateArticles
+
       return newArticles
 
    }catch(err) {
